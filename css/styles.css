@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: rgb(208, 0, 255);
+  --secondary: rgb(0, 255, 255);
+  --background: rgb(10, 5, 25);
+  --card-bg: rgb(18, 18, 40);
+  --text-main: rgb(230, 230, 255);
+  --text-muted: rgb(140, 140, 180);
+  --cta: rgb(255, 20, 147);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../assets/background-wallpaper/background2.jpg) no-repeat;
+    background-position: center;
+}
+
+header {
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px 100px;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 2em;
+    user-select: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--primary);
+    margin-left: 40px;
+    font-weight: 500;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.navbar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navbar .btnlogin {
+    background: transparent;
+    border: 2px solid var(--card-bg);
+    color: var(--text-main);
+    box-shadow: 0 0 30px var(--primary);
+    width: 100px;
+    height: 50px;
+    font-size: 1.5em;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 400;
+    margin-left: 40px;
+    transition: 0.3s ease;
+}
+
+.navbar .btnlogin:hover {
+    background: var(--primary);
+    color: black;
+}
+
+.wrapper {
+    position: relative;
+    height: 440px;
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(208, 0, 255, 0.3); /* subtle neon glow tint */
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: var(--primary);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--primary);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--primary);
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--primary);
+    line-height: 57px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: var(--cta); /* Eye-catching neon pink */
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: var(--primary); /* Smooth transition to purple */
+}
+
+.login-register{
+    font-size: .9em;
+    color: var(--text-main);
+    text-align: center;
+    font-weight: 400;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+
+}
+.login-register p a:hover {
+    text-decoration: underline;
+}
